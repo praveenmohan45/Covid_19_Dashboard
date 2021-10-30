@@ -1,0 +1,2182 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20212.21.0605.1023                               -->
+<workbook original-version='18.1' source-build='2021.2.0 (20212.21.0605.1023)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <_.fcp.MarkAnimation.true...style-rule element='animation'>
+      <format attr='animation-on' value='ao-off' />
+    </_.fcp.MarkAnimation.true...style-rule>
+  </style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='cases' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Daily Change&quot;'>
+        <calculation class='tableau' formula='&quot;Daily Change&quot;' />
+        <members>
+          <member value='&quot;Daily Change&quot;' />
+          <member value='&quot;Cumulative&quot;' />
+        </members>
+      </column>
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[Parameter 1]' type='palette'>
+            <map to='#9c755f'>
+              <bucket>&quot;Daily Change&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Cumulative&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+    </datasource>
+    <datasource caption='WHO-COVID-19-global-data (WHO COVID-19 global table data)' inline='true' name='federated.08xpkhx1uwi37u16dlpa90jso99x' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='WHO COVID-19 global table data' name='excel-direct.0wkssgv14wltgb111wdbb0ntsmwx'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/msc/tableau/sample/WHO COVID-19 global table data.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.0wkssgv14wltgb111wdbb0ntsmwx' name='WHO-COVID-19-global-data' table='[&apos;WHO-COVID-19-global-data$&apos;]' type='table'>
+          <columns gridOrigin='A1:H10001:no:A1:H10001:0' header='yes' outcome='6'>
+            <column datatype='date' name='Date_reported' ordinal='0' />
+            <column datatype='string' name='Country_code' ordinal='1' />
+            <column datatype='string' name='Country' ordinal='2' />
+            <column datatype='string' name='WHO_region' ordinal='3' />
+            <column datatype='integer' name='New_cases' ordinal='4' />
+            <column datatype='integer' name='Cumulative_cases' ordinal='5' />
+            <column datatype='integer' name='New_deaths' ordinal='6' />
+            <column datatype='integer' name='Cumulative_deaths' ordinal='7' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.0wkssgv14wltgb111wdbb0ntsmwx' name='WHO-COVID-19-global-data' table='[&apos;WHO-COVID-19-global-data$&apos;]' type='table'>
+          <columns gridOrigin='A1:H10001:no:A1:H10001:0' header='yes' outcome='6'>
+            <column datatype='date' name='Date_reported' ordinal='0' />
+            <column datatype='string' name='Country_code' ordinal='1' />
+            <column datatype='string' name='Country' ordinal='2' />
+            <column datatype='string' name='WHO_region' ordinal='3' />
+            <column datatype='integer' name='New_cases' ordinal='4' />
+            <column datatype='integer' name='Cumulative_cases' ordinal='5' />
+            <column datatype='integer' name='New_deaths' ordinal='6' />
+            <column datatype='integer' name='Cumulative_deaths' ordinal='7' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[WHO-COVID-19-global-data]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:H10001:no:A1:H10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date_reported</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date_reported]</local-name>
+            <parent-name>[WHO-COVID-19-global-data]</parent-name>
+            <remote-alias>Date_reported</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country_code]</local-name>
+            <parent-name>[WHO-COVID-19-global-data]</parent-name>
+            <remote-alias>Country_code</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[WHO-COVID-19-global-data]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WHO_region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[WHO_region]</local-name>
+            <parent-name>[WHO-COVID-19-global-data]</parent-name>
+            <remote-alias>WHO_region</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>New_cases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[New_cases]</local-name>
+            <parent-name>[WHO-COVID-19-global-data]</parent-name>
+            <remote-alias>New_cases</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cumulative_cases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cumulative_cases]</local-name>
+            <parent-name>[WHO-COVID-19-global-data]</parent-name>
+            <remote-alias>Cumulative_cases</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>New_deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[New_deaths]</local-name>
+            <parent-name>[WHO-COVID-19-global-data]</parent-name>
+            <remote-alias>New_deaths</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cumulative_deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cumulative_deaths]</local-name>
+            <parent-name>[WHO-COVID-19-global-data]</parent-name>
+            <remote-alias>Cumulative_deaths</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='cases measure' datatype='integer' name='[Calculation_225180043076960257]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;Daily Change&quot; THEN [New_cases]&#13;&#10;WHEN &quot;Cumulative&quot; THEN [Cumulative_cases]&#13;&#10;END' />
+      </column>
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+        <semantic-values semantic-role='[Country].[Name]'>
+          <semantic-value key='&quot;The United Kingdom&quot;' value='&quot;United Kingdom&quot;' />
+        </semantic-values>
+      </column>
+      <column caption='Country code' datatype='string' name='[Country_code]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Cumulative cases' datatype='integer' name='[Cumulative_cases]' role='measure' type='quantitative' />
+      <column caption='Cumulative deaths' datatype='integer' name='[Cumulative_deaths]' role='measure' type='quantitative' />
+      <column caption='Date reported' datatype='date' name='[Date_reported]' role='dimension' type='ordinal' />
+      <column caption='New cases' datatype='integer' name='[New_cases]' role='measure' type='quantitative' />
+      <column caption='New deaths' datatype='integer' name='[New_deaths]' role='measure' type='quantitative' />
+      <column caption='WHO region' datatype='string' name='[WHO_region]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='WHO-COVID-19-global-data' datatype='table' name='[__tableau_internal_object_id__].[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]' role='measure' type='quantitative' />
+      <column caption='death measure' datatype='integer' name='[cases measure (copy)_225180043080769538]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;Daily Change&quot; THEN [New_deaths]&#13;&#10;WHEN &quot;Cumulative&quot; THEN [Cumulative_deaths]&#13;&#10;END' />
+      </column>
+      <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+      <column-instance column='[WHO_region]' derivation='None' name='[none:WHO_region:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Country)' hidden='true' name='[Action (Country)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Country]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/Praveen/OneDrive/Documents/My Tableau Repository/Datasources/WHO-COVID-19-.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='10/30/2021 07:14:48 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='WHO-COVID-19-global-data (WHO COVID-19 global table data)' increment-value='%null%' refresh-type='create' rows-inserted='130701' timestamp-start='2021-10-30 07:14:48.951' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Date_reported</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date_reported]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date_reported</remote-alias>
+              <ordinal>0</ordinal>
+              <family>WHO-COVID-19-global-data</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2122</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country_code</remote-alias>
+              <ordinal>1</ordinal>
+              <family>WHO-COVID-19-global-data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>377</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>2</ordinal>
+              <family>WHO-COVID-19-global-data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>377</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>WHO_region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[WHO_region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>WHO_region</remote-alias>
+              <ordinal>3</ordinal>
+              <family>WHO-COVID-19-global-data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>New_cases</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[New_cases]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>New_cases</remote-alias>
+              <ordinal>4</ordinal>
+              <family>WHO-COVID-19-global-data</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6920</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cumulative_cases</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Cumulative_cases]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cumulative_cases</remote-alias>
+              <ordinal>5</ordinal>
+              <family>WHO-COVID-19-global-data</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20803</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>New_deaths</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[New_deaths]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>New_deaths</remote-alias>
+              <ordinal>6</ordinal>
+              <family>WHO-COVID-19-global-data</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1137</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cumulative_deaths</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Cumulative_deaths]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cumulative_deaths</remote-alias>
+              <ordinal>7</ordinal>
+              <family>WHO-COVID-19-global-data</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8184</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='0.764543' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.235457' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:WHO_region:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;AFRO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;EURO&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;WPRO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;EMRO&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;SEARO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;AMRO&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Country:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Antigua and Barbuda&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Brazil&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Côte d’Ivoire&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Falkland Islands (Malvinas)&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Guinea&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Kazakhstan&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Malta&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;New Zealand&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Portugal&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Saudi Arabia&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Syrian Arab Republic&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Uruguay&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Belize&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Chad&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ecuador&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Gibraltar&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ireland&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Liechtenstein&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Morocco&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Palau&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Saint Kitts and Nevis&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;South Africa&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Turks and Caicos Islands&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;United States of America&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;American Samoa&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Bolivia (Plurinational State of)&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Comoros&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Eritrea&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Guadeloupe&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Jamaica&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Malawi&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Nauru&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Peru&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Saint Vincent and the Grenadines&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Sudan&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;United Arab Emirates&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Australia&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Burkina Faso&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Cyprus&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;France&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Holy See&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Kuwait&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Mauritius&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Niue&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Republic of Moldova&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Sierra Leone&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Timor-Leste&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Viet Nam&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Argentina&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;British Virgin Islands&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Croatia&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Faroe Islands&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Guinea-Bissau&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Kenya&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Marshall Islands&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Nicaragua&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Puerto Rico&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Senegal&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Tajikistan&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Uzbekistan&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Andorra&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Bonaire&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Congo&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Estonia&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Guam&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Japan&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Malaysia&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Nepal&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Philippines&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Samoa&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Suriname&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;United Republic of Tanzania&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Barbados&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Cayman Islands&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Dominica&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Germany&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Iran (Islamic Republic of)&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Liberia&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Montenegro&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Saint Barthélemy&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Solomon Islands&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Turkey&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Albania&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Benin&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Chile&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Egypt&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Greece&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Isle of Man&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Lithuania&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Mozambique&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Panama&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Saint Lucia&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;South Sudan&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Tuvalu&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Bahrain&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Cameroon&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Denmark&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Gambia&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;India&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Lebanon&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Monaco&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;occupied Palestinian territory, including east Jerusalem&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Rwanda&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Slovakia&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Trinidad and Tobago&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Zimbabwe&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Angola&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Bosnia and Herzegovina&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Cook Islands&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Eswatini&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Guatemala&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Jersey&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Maldives&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Netherlands&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Pitcairn Islands&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;San Marino&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Sweden&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Austria&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Burundi&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Czechia&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;French Guiana&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Honduras&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Kyrgyzstan&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Mayotte&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;North Macedonia&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Réunion&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Singapore&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Togo&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Wallis and Futuna&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Azerbaijan&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Cabo Verde&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Democratic People&apos;s Republic of Korea&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;French Polynesia&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Hungary&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Lao People&apos;s Democratic Republic&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Mexico&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Northern Mariana Islands (Commonwealth of the)&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Romania&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Sint Eustatius&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Tokelau&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Yemen&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Bangladesh&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Canada&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Djibouti&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Georgia&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Indonesia&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Lesotho&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Mongolia&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Oman&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Saba&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Slovenia&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Tunisia&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Belarus&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Belgium&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Central African Republic&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Dominican Republic&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Ghana&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Iraq&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Libya&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Montserrat&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Pakistan&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Saint Helena&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Somalia&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Turkmenistan&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Armenia&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Brunei Darussalam&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Cuba&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Fiji&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Guyana&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Kiribati&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Martinique&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Niger&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Qatar&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Serbia&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Thailand&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Vanuatu&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Anguilla&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Botswana&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Costa Rica&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Ethiopia&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Guernsey&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Jordan&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Mali&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;New Caledonia&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Poland&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Sao Tome and Principe&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Switzerland&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;United States Virgin Islands&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Afghanistan&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Bermuda&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;China&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;El Salvador&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Greenland&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Israel&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Luxembourg&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Myanmar&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Papua New Guinea&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Saint Martin&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Spain&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Uganda&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Bahamas&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Cambodia&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Democratic Republic of the Congo&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Gabon&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Iceland&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Latvia&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Micronesia (Federated States of)&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Norway&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Russian Federation&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Sint Maarten&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Tonga&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Zambia&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Aruba&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Bulgaria&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Curaçao&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Finland&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Haiti&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Kosovo[1]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Mauritania&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Nigeria&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Republic of Korea&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Seychelles&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;The United Kingdom&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Venezuela (Bolivarian Republic of)&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Algeria&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Bhutan&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Colombia&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Equatorial Guinea&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Grenada&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Italy&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Madagascar&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Namibia&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Paraguay&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Saint Pierre and Miquelon&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Sri Lanka&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Ukraine&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='cases' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Daily Change&quot;'>
+          <calculation class='tableau' formula='&quot;Daily Change&quot;' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='WHO-COVID-19-global-data' id='WHO-COVID-19-global-data_8AD9DF6218304E3BA372F841545FF750'>
+            <properties context=''>
+              <relation connection='excel-direct.0wkssgv14wltgb111wdbb0ntsmwx' name='WHO-COVID-19-global-data' table='[&apos;WHO-COVID-19-global-data$&apos;]' type='table'>
+                <columns gridOrigin='A1:H10001:no:A1:H10001:0' header='yes' outcome='6'>
+                  <column datatype='date' name='Date_reported' ordinal='0' />
+                  <column datatype='string' name='Country_code' ordinal='1' />
+                  <column datatype='string' name='Country' ordinal='2' />
+                  <column datatype='string' name='WHO_region' ordinal='3' />
+                  <column datatype='integer' name='New_cases' ordinal='4' />
+                  <column datatype='integer' name='Cumulative_cases' ordinal='5' />
+                  <column datatype='integer' name='New_deaths' ordinal='6' />
+                  <column datatype='integer' name='Cumulative_deaths' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <shared-views>
+    <shared-view name='federated.08xpkhx1uwi37u16dlpa90jso99x'>
+      <datasources>
+        <datasource caption='WHO-COVID-19-global-data (WHO COVID-19 global table data)' name='federated.08xpkhx1uwi37u16dlpa90jso99x' />
+      </datasources>
+      <datasource-dependencies datasource='federated.08xpkhx1uwi37u16dlpa90jso99x'>
+        <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+          <semantic-values semantic-role='[Country].[Name]'>
+            <semantic-value key='&quot;The United Kingdom&quot;' value='&quot;United Kingdom&quot;' />
+          </semantic-values>
+        </column>
+        <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]'>
+        <groupfilter function='member' level='[none:Country:nk]' member='&quot;Jamaica&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+        <target field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>COVID19 Case Deatils</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WHO-COVID-19-global-data (WHO COVID-19 global table data)' name='federated.08xpkhx1uwi37u16dlpa90jso99x' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.08xpkhx1uwi37u16dlpa90jso99x'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;The United Kingdom&quot;' value='&quot;United Kingdom&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='New cases' datatype='integer' name='[New_cases]' role='measure' type='quantitative' />
+            <column caption='New deaths' datatype='integer' name='[New_deaths]' role='measure' type='quantitative' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[New_cases]' derivation='Sum' name='[sum:New_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[New_deaths]' derivation='Sum' name='[sum:New_deaths:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[sum:New_cases:qk]' num-steps='5' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#00ace3</color>
+                <color>#14b0e2</color>
+                <color>#28b4e1</color>
+                <color>#3db8e0</color>
+                <color>#51bcdf</color>
+                <color>#65c1de</color>
+                <color>#78c5dd</color>
+                <color>#8cc9dc</color>
+                <color>#9fcddb</color>
+                <color>#b3d1da</color>
+                <color>#c6d5d9</color>
+                <color>#d9d9d9</color>
+                <color>#bfced2</color>
+                <color>#a6c3cc</color>
+                <color>#8fb9c5</color>
+                <color>#79aebf</color>
+                <color>#64a5b8</color>
+                <color>#519bb2</color>
+                <color>#3e92ab</color>
+                <color>#2d89a5</color>
+                <color>#1c809e</color>
+                <color>#0d7898</color>
+                <color>#007092</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='total' value='#000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]' value='false' />
+            <format attr='break-on-special' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]' value='false' />
+            <format attr='omit-on-special' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[Latitude (generated)]' value='false' />
+            <format attr='break-on-special' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[Latitude (generated)]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[Latitude (generated)]' value='false' />
+            <format attr='omit-on-special' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[Longitude (generated)]' value='false' />
+            <format attr='break-on-special' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[Longitude (generated)]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[Longitude (generated)]' value='false' />
+            <format attr='background-color' value='#d4d4d4' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='normal' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.08xpkhx1uwi37u16dlpa90jso99x].[sum:New_cases:qk]' />
+              <text column='[federated.08xpkhx1uwi37u16dlpa90jso99x].[sum:New_deaths:qk]' />
+              <text column='[federated.08xpkhx1uwi37u16dlpa90jso99x].[sum:New_cases:qk]' />
+              <lod column='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]' />
+              <geometry column='[federated.08xpkhx1uwi37u16dlpa90jso99x].[Geometry (generated)]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Country:&#9;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>New cases:&#9;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>New deaths:&#9;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#f17b79' underline='true'>Total deaths</run>
+                <run bold='true' fontcolor='#ffffff' underline='true'> :</run>
+                <run fontcolor='#ffffff'><![CDATA[<[federated.08xpkhx1uwi37u16dlpa90jso99x].[sum:New_deaths:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#f17b79' underline='true'>Total Cases</run>
+                <run fontcolor='#f17b79' underline='true'>Æ </run>
+                <run fontcolor='#f17b79'>:</run>
+                <run fontcolor='#ffffff'><![CDATA[ <[federated.08xpkhx1uwi37u16dlpa90jso99x].[sum:New_cases:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08xpkhx1uwi37u16dlpa90jso99x].[Latitude (generated)]</rows>
+        <cols>[federated.08xpkhx1uwi37u16dlpa90jso99x].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{ECB65499-1D93-4B0F-9A79-6D3FF55BCBA6}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WHO-COVID-19-global-data (WHO COVID-19 global table data)' name='federated.08xpkhx1uwi37u16dlpa90jso99x' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='cases' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Daily Change&quot;'>
+              <calculation class='tableau' formula='&quot;Daily Change&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.08xpkhx1uwi37u16dlpa90jso99x'>
+            <column caption='cases measure' datatype='integer' name='[Calculation_225180043076960257]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;Daily Change&quot; THEN [New_cases]&#13;&#10;WHEN &quot;Cumulative&quot; THEN [Cumulative_cases]&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;The United Kingdom&quot;' value='&quot;United Kingdom&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='Cumulative cases' datatype='integer' name='[Cumulative_cases]' role='measure' type='quantitative' />
+            <column caption='Date reported' datatype='date' name='[Date_reported]' role='dimension' type='ordinal' />
+            <column caption='New cases' datatype='integer' name='[New_cases]' role='measure' type='quantitative' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date_reported]' derivation='None' name='[none:Date_reported:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_225180043076960257]' derivation='Sum' name='[sum:Calculation_225180043076960257:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Date_reported:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[sum:Calculation_225180043076960257:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#cbe2cc</color>
+                <color>#a8d3ab</color>
+                <color>#89c48d</color>
+                <color>#6cb571</color>
+                <color>#53a658</color>
+                <color>#3c9742</color>
+                <color>#28882f</color>
+                <color>#18791e</color>
+                <color>#0a6a10</color>
+                <color>#005b06</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#d4d4d4' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.0099999997764825821' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08xpkhx1uwi37u16dlpa90jso99x].[sum:Calculation_225180043076960257:qk]</rows>
+        <cols>[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Date_reported:qk]</cols>
+      </table>
+      <simple-id uuid='{7365D6E0-1991-4DB4-BC29-D84F9E211D83}' />
+    </worksheet>
+    <worksheet name='Sheet 2 (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WHO-COVID-19-global-data (WHO COVID-19 global table data)' name='federated.08xpkhx1uwi37u16dlpa90jso99x' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='cases' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Daily Change&quot;'>
+              <calculation class='tableau' formula='&quot;Daily Change&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.08xpkhx1uwi37u16dlpa90jso99x'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;The United Kingdom&quot;' value='&quot;United Kingdom&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='Cumulative deaths' datatype='integer' name='[Cumulative_deaths]' role='measure' type='quantitative' />
+            <column caption='Date reported' datatype='date' name='[Date_reported]' role='dimension' type='ordinal' />
+            <column caption='New deaths' datatype='integer' name='[New_deaths]' role='measure' type='quantitative' />
+            <column caption='death measure' datatype='integer' name='[cases measure (copy)_225180043080769538]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;Daily Change&quot; THEN [New_deaths]&#13;&#10;WHEN &quot;Cumulative&quot; THEN [Cumulative_deaths]&#13;&#10;END' />
+            </column>
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date_reported]' derivation='None' name='[none:Date_reported:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[cases measure (copy)_225180043080769538]' derivation='Sum' name='[sum:cases measure (copy)_225180043080769538:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Date_reported:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.08xpkhx1uwi37u16dlpa90jso99x].[sum:cases measure (copy)_225180043080769538:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f2dada</color>
+                <color>#f3c3c3</color>
+                <color>#f5abab</color>
+                <color>#f69393</color>
+                <color>#f87c7c</color>
+                <color>#f96363</color>
+                <color>#fa4b4b</color>
+                <color>#fc3232</color>
+                <color>#fd1919</color>
+                <color>#ff0000</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#d4d4d4' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.020994475111365318' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08xpkhx1uwi37u16dlpa90jso99x].[sum:cases measure (copy)_225180043080769538:qk]</rows>
+        <cols>[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Date_reported:qk]</cols>
+      </table>
+      <simple-id uuid='{2E4F2A3F-E30A-4773-8A0C-792594954AF5}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#d4d4d4' />
+        </style-rule>
+        <style-rule element='dash-subtitle'>
+          <format attr='color' value='#000000' />
+        </style-rule>
+      </style>
+      <size maxheight='850' maxwidth='1650' minheight='850' minwidth='1650' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='WHO-COVID-19-global-data (WHO COVID-19 global table data)' name='federated.08xpkhx1uwi37u16dlpa90jso99x' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='cases' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Daily Change&quot;'>
+          <calculation class='tableau' formula='&quot;Daily Change&quot;' />
+          <members>
+            <member value='&quot;Daily Change&quot;' />
+            <member value='&quot;Cumulative&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.08xpkhx1uwi37u16dlpa90jso99x'>
+        <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+          <semantic-values semantic-role='[Country].[Name]'>
+            <semantic-value key='&quot;The United Kingdom&quot;' value='&quot;United Kingdom&quot;' />
+          </semantic-values>
+        </column>
+        <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98118' id='14' param='vert' type-v2='layout-flow' w='99030' x='485' y='941'>
+            <zone h='98118' id='5' param='horz' type-v2='layout-flow' w='99030' x='485' y='941'>
+              <zone h='98118' id='3' type-v2='layout-basic' w='99030' x='485' y='941'>
+                <zone h='49059' id='1' name='Sheet 1' w='88359' x='485' y='941'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='24529' id='8' name='Sheet 2' w='99030' x='485' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='24530' id='12' name='Sheet 2 (2)' w='99030' x='485' y='74529'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='15705' id='6' mode='dropdown' name='Sheet 1' param='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]' type-v2='filter' w='10671' x='88844' y='941'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='20473' id='11' mode='list' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='10671' x='88844' y='29527'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='12881' id='7' name='Sheet 1' pane-specification-id='0' param='[federated.08xpkhx1uwi37u16dlpa90jso99x].[sum:New_cases:qk]' type-v2='color' w='10671' x='88844' y='16646'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='24' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98118' id='23' param='vert' type-v2='layout-flow' w='99030' x='485' y='941'>
+                <zone h='15705' id='6' mode='dropdown' name='Sheet 1' param='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]' type-v2='filter' w='10671' x='88844' y='941'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49059' id='1' is-fixed='true' name='Sheet 1' w='88359' x='485' y='941'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='12881' id='7' name='Sheet 1' pane-specification-id='0' param='[federated.08xpkhx1uwi37u16dlpa90jso99x].[sum:New_cases:qk]' type-v2='color' w='10671' x='88844' y='16646'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='20473' id='11' mode='list' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='10671' x='88844' y='29527'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='200' h='24529' id='8' is-fixed='true' name='Sheet 2' w='99030' x='485' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='200' h='24530' id='12' is-fixed='true' name='Sheet 2 (2)' w='99030' x='485' y='74529'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{7003B5BB-6427-42A1-87B4-D0C5B99C17E4}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08xpkhx1uwi37u16dlpa90jso99x].[sum:New_cases:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.08xpkhx1uwi37u16dlpa90jso99x].[:Measure Names]</field>
+            <field>[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{8D49AFC4-F306-4E3B-B1A1-7D2DF5A9F216}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]' type='filter' />
+            <card mode='list' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='4' param='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]</field>
+            <field>[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Date_reported:qk]</field>
+            <field>[federated.08xpkhx1uwi37u16dlpa90jso99x].[yr:Date_reported:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F681056F-77B6-4C9B-BE4A-1B050F9EB0B9}' />
+    </window>
+    <window class='worksheet' name='Sheet 2 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='list' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='2' param='[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Country:nk]</field>
+            <field>[federated.08xpkhx1uwi37u16dlpa90jso99x].[none:Date_reported:qk]</field>
+            <field>[federated.08xpkhx1uwi37u16dlpa90jso99x].[yr:Date_reported:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{EEDDC4DB-7B7B-4704-9BAA-8B60BC3E5FAE}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 2 (2)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='11' />
+      <simple-id uuid='{BCFB179D-53BD-4D1C-99D1-9ADF697D1B17}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      0AjfeH47z446eLNQjVsSdHn47usJvUO9/2wkAALHcXhu5z7+/o1eTDS3dNTy3oXNtDfUY1kz
+      u6Pn83l+vKWbb28/xphnlLSa9PkrqvmDjWtmtI8EQJyUSqexTItAwL7kYx0dHuG/3tzHY/tH
+      GSZQgLM7t4B2+dHty+lobprRftINKk6KhMMFufgBmhK1fOq963j8nvV8YWkNnZZT1DFQeQwm
+      k+kZ7ycBEEVVGYtx7/rV/ODuDXxtTQNdYQ+K8K60Voodw5Mz3k8CIEqiIhLhjrXL+dcPb+TW
+      +mCBS4MT3bMXUZWXAIiSCoeCfPWWdWxKFK5dsDaqeOSmZdy7Ye2M95UAiJILBAJ8/bbCheDq
+      hgoWt7dcVJexBEDMilAwyJc2XcmSAixFWx28+Ia7BEDMmppYBV++fikxNbOZM5TW3FwDMXV8
+      yEgscPEDGiQAYlYtaWviC6uaMPWFvyB0fY3J1z94PQ9uWsKSkEd4hg/rTiUPwkRZ2HOwl829
+      Qzx7eIxtKcU7jYitN10evmMNzYlaAKaTKaaSSZrq6y7qc2UwnCgLizvaWdzRzr3ZLJ994iV+
+      NX72EmFTrY2lFJ7nYRgGFdEIFdEz3/S6UFICiLJzbHiUjz3+OoNnW2lTa6qUw6pKm+vbarm6
+      rY7aWAWhYADDMDBNE8MwLrhHSAIgytLmnfv4/IsHSJ+nmRrQLlFcbDyilkE8aNESC/G5DSuo
+      q6k67+dIAETZemXPAb744j4GnJn31bTZHt96zzKWtTefczvpBRJl65rFnfzLrVeyKjrzffvy
+      Bp96ejtDo2Pn3E4CIMpae0OC73zgWu6oD8x4wZGs62Gb577EJQCi7FVGI3z5tmv5zBU12PrC
+      H5o1hkxCoXPPxSoBEHOCZVl8fOMa7l/fSdw4fwgWh+H+m9ec9/VIaQSLOUVrzYFjQzyydS+/
+      GkjS75h4J7o8be0RVS7LqoJ85cbV1EsvkJjPppNJ3uw9ytZjY3RWRWirrqA1XkVFNIptX9gA
+      OQmA8DVpAwhfkwAIX5MACF+TAAhfkwAIX5MACF+TAAhfkwAIX5MACF+TAAhfkwAIX5MACF+T
+      AAhfkwAIX5MACF+TAAhfkwAIX5MACF+TAAhfkwAIX5MACF+TAAhfkwAIX5MACF+TAAhfkwAI
+      X5MACF+TAAhfkwAIX5MACF+TAAhfkwAIX5MACF+TAAhfkwAIX7Msy5rtcxBi1vw/FvfdAlwU
+      AskAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+      AA8U+k/AYgAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2 (2)' width='192'>
+      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
+      7P/x85mxMo/laQAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
